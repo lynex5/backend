@@ -1,0 +1,104 @@
+
+/* Toast Styles */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #111;
+  border: 1px solid #333;
+  color: #fff;
+  font-family: var(--font-mono);
+  padding: 16px 24px;
+  z-index: 9999;
+  animation: slideIn 0.3s ease-out forwards;
+}
+.toast.success {
+  border-left: 3px solid #00FF41;
+}
+.toast.error {
+  border-left: 3px solid #FF3333;
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Dashboard Forms */
+.dash-input, .dash-textarea {
+  background: #0D0D0D;
+  border: 1px solid #333;
+  color: #fff;
+  font-family: var(--font-mono);
+  padding: 12px;
+  width: 100%;
+  outline: none;
+}
+.dash-input:focus, .dash-textarea:focus {
+  border-color: #00FF41;
+}
+.dash-btn {
+  background: transparent;
+  border: 1px solid #00FF41;
+  color: #00FF41;
+  font-family: var(--font-display);
+  padding: 8px 16px;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.dash-btn:hover {
+  background: #00FF41;
+  color: #000;
+}
+.dash-btn-delete {
+  border-color: #FF3333;
+  color: #FF3333;
+}
+.dash-btn-delete:hover {
+  background: #FF3333;
+  color: #000;
+}
+.dash-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+.dash-table th, .dash-table td {
+  border-bottom: 1px solid #333;
+  padding: 12px 8px;
+  text-align: left;
+}
+.dash-table th {
+  color: #555;
+  font-weight: normal;
+}
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  background: #111;
+  border: 1px solid #333;
+  padding: 4px 12px;
+  margin: 4px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.skill-tag button {
+  background: none;
+  border: none;
+  color: #00FF41;
+  cursor: pointer;
+  margin-left: 8px;
+}
+.drop-zone {
+  border: 1px dashed #333;
+  padding: 32px;
+  text-align: center;
+  font-family: var(--font-mono);
+  color: #888;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.drop-zone.active {
+  border-color: #00FF41;
+}
