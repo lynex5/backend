@@ -52,8 +52,13 @@ public class GfgStreakService {
             headers.set("Cookie", config.getFullCookieString());
             headers.set("Referer", "https://www.geeksforgeeks.org/");
             headers.set("Origin", "https://www.geeksforgeeks.org");
-            headers.set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36");
             headers.set("Accept", "*/*");
+            headers.set("Accept-Language", "en-GB,en-US;q=0.9,en;q=0.8");
+            headers.set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36");
+            headers.set("sec-fetch-site", "same-site");
+            headers.set("sec-fetch-mode", "cors");
+            headers.set("sec-fetch-dest", "empty");
+            headers.set("priority", "u=1, i");
 
             HttpEntity<String> entity = new HttpEntity<>(headers);
             ResponseEntity<String> response = restTemplate.exchange(
