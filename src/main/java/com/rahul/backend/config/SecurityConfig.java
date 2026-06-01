@@ -67,6 +67,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.POST, "/api/contact/message").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/stats").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/timeline").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/gfg/streak").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/resume/download").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/resume/status").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/auth/login").permitAll()
